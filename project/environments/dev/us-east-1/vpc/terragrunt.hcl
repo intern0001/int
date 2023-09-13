@@ -20,3 +20,6 @@ inputs = {
   vpc_cidr=local.vpc_cidr
   vpc_name=local.vpc_name
 }
+dependencies {
+    paths = ["../ecr/"]
+}
