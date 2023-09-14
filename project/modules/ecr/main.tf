@@ -1,6 +1,15 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "5.10.0"
+    }
+  }
+}
+
 module "ecr" {
   source = "terraform-aws-modules/ecr/aws"
-  repository_force_delete = true
+  //repository_force_delete = true
    # Name of the ECR repository
 
   repository_name = var.ecr_repo_name
